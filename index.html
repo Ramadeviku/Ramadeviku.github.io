@@ -54,8 +54,6 @@
 
       <ul class="nav-links">
         <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#simulator" class="nav-link">Simulator</a></li>
-        <li><a href="#api-bench" class="nav-link">API Bench</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -117,16 +115,16 @@
         </p>
 
         <div class="hero-cta-group">
-          <a href="#simulator" class="btn btn-primary">
+          <a href="#projects" class="btn btn-primary">
             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span>Launch Architecture Simulator</span>
+            <span>Explore Featured Work</span>
           </a>
           <a href="assets/Rama_Senior_NET_Full_Stack_Developer.docx" download="Rama_Senior_NET_Full_Stack_Developer.docx" class="btn btn-secondary">
             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span>Download Resume (.docx)</span>
           </a>
-          <a href="#projects" class="btn btn-secondary">
-            <span>Explore Work</span>
+          <a href="#skills" class="btn btn-secondary">
+            <span>Technical Skills</span>
           </a>
         </div>
 
@@ -270,132 +268,6 @@
       <div class="client-item">
         <span class="client-badge-mini">BANKING & GOV</span>
         <span>BARTRONICS INDIA</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- INTERACTIVE ARCHITECTURE SIMULATOR (BESPOKE SANDBOX) -->
-  <section class="section" id="simulator">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Interactive Mesh Sandbox</span>
-        <h2 class="section-title">System Architecture Simulator</h2>
-        <p class="section-subtitle">
-          Click any node in the chain to inspect live protocols, JSON payloads, and SLA metrics. Click <strong>Dispatch Live Event</strong> to simulate traffic traveling through the cloud architecture.
-        </p>
-      </div>
-
-      <div class="sandbox-card">
-        <div class="sandbox-controls-bar">
-          <div class="sandbox-preset-btns">
-            <button class="sandbox-tab-btn active" data-preset="cvs">CVS Health (FHIR & AWS EventBridge)</button>
-            <button class="sandbox-tab-btn" data-preset="microsoft">Microsoft (Purview DCS & Flighting)</button>
-            <button class="sandbox-tab-btn" data-preset="lacoe">LACOE (Statewide Education Exchange)</button>
-          </div>
-
-          <div class="sandbox-action-cluster">
-            <button class="btn btn-primary btn-sm" id="sandbox-dispatch-btn">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <span>Dispatch Live Event</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="pipeline-layout">
-          <!-- Left: Nodes Flow Chain -->
-          <div class="pipeline-diagram-box">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.06);">
-              <span id="pipeline-active-title" style="font-family: var(--font-heading); font-weight: 700; color: #fff;">Pipeline Chain</span>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #22c55e;">● Architecture Active</span>
-            </div>
-
-            <div class="nodes-chain" id="pipeline-nodes-chain">
-              <!-- Dynamically populated via JS -->
-            </div>
-          </div>
-
-          <!-- Right: Interactive Node Inspector Drawer -->
-          <div class="node-inspector-drawer">
-            <div>
-              <div class="inspector-header">
-                <span class="inspector-tag" id="insp-node-type">Middleware</span>
-                <h3 class="inspector-title" id="insp-node-name">Node Inspector</h3>
-              </div>
-
-              <div class="inspector-metrics-grid">
-                <div class="insp-metric-card">
-                  <div class="insp-metric-label">Avg Latency</div>
-                  <div class="insp-metric-val" id="insp-node-latency">3.1 ms</div>
-                </div>
-                <div class="insp-metric-card">
-                  <div class="insp-metric-label">Throughput</div>
-                  <div class="insp-metric-val" id="insp-node-throughput">28,500 req/s</div>
-                </div>
-                <div class="insp-metric-card" style="grid-column: span 2;">
-                  <div class="insp-metric-label">Transport Protocol</div>
-                  <div class="insp-metric-val" style="font-size: 0.9rem;" id="insp-node-protocol">gRPC / HTTP/2</div>
-                </div>
-              </div>
-
-              <div style="margin-bottom: 0.5rem; font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted);">
-                LIVE JSON PAYLOAD:
-              </div>
-              <pre class="inspector-payload-viewer" id="insp-node-payload">// Click a node to view payload</pre>
-            </div>
-
-            <div>
-              <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent); margin-bottom: 0.35rem;">
-                RESILIENCE PATTERN:
-              </div>
-              <p class="inspector-note" id="insp-node-note">
-                Distributed memory caching via Azure Redis & circuit breaker rate limiting.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LIVE INTERACTIVE API TEST BENCH (MOCK SWAGGER) -->
-  <section class="section" id="api-bench" style="padding-top: 2rem;">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Interactive Bench</span>
-        <h2 class="section-title">Live API Test Playground</h2>
-        <p class="section-subtitle">
-          Test real enterprise API contracts designed by Rama. Select an endpoint and click <strong>Execute Call</strong> to test simulated latency and inspect the real JSON response.
-        </p>
-      </div>
-
-      <div class="api-bench-card">
-        <div class="api-bench-topbar">
-          <span class="api-method-badge">GET / POST</span>
-          <select class="api-endpoint-select" id="api-endpoint-selector">
-            <option value="/api/v10/healthcare/fhir/patient/CVS-9481">GET /api/v10/healthcare/fhir/patient/CVS-9481</option>
-            <option value="/api/v10/security/dlp/classify-document">POST /api/v10/security/dlp/classify-document</option>
-            <option value="/api/v10/education/exchange/districts/82">GET /api/v10/education/exchange/districts/82</option>
-            <option value="/api/v10/throttling/evaluate-quota">POST /api/v10/throttling/evaluate-quota</option>
-          </select>
-          <button class="btn btn-primary btn-sm" id="api-send-btn">
-            <span>Execute Call</span>
-          </button>
-        </div>
-
-        <div class="api-response-screen">
-          <div class="api-response-header">
-            <div>
-              <span>STATUS: </span>
-              <span class="api-status-pill" id="api-status-display">200 OK</span>
-            </div>
-            <div>
-              <span>LATENCY: </span>
-              <span id="api-latency-display" style="color: var(--accent); font-weight: 700;">14 ms</span>
-            </div>
-            <div style="color: var(--text-muted);">Content-Type: application/json</div>
-          </div>
-          <pre id="api-response-body" style="line-height: 1.5; color: #a5f3fc; overflow-x: auto;">// Executing API response...</pre>
-        </div>
       </div>
     </div>
   </section>
@@ -1214,8 +1086,6 @@
 
       <div class="footer-nav">
         <a href="#about">About</a>
-        <a href="#simulator">Simulator</a>
-        <a href="#api-bench">API Bench</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
